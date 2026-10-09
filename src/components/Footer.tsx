@@ -51,18 +51,23 @@ export function Footer({ locale }: { locale: Locale }) {
                     <span dir="ltr">{footer.contact.email}</span>
                   </a>
                 </li>
-                <li>
-                  <a
-                    href={`tel:${footer.contact.phone.replace(/\s+/g, "")}`}
-                    className="flex items-center gap-2 text-sm text-ink-muted transition-colors hover:text-gold"
-                  >
-                    <Phone size={16} className="shrink-0 text-gold" />
-                    <span dir="ltr">{footer.contact.phone}</span>
-                  </a>
-                </li>
-                <li className="flex items-center gap-2 text-sm text-ink-muted">
-                  <MapPin size={16} className="shrink-0 text-gold" />
-                  {footer.contact.city}
+                {footer.contact.phones.map((phone) => (
+                  <li key={phone}>
+                    <a
+                      href={`tel:${phone.replace(/\s+/g, "")}`}
+                      className="flex items-center gap-2 text-sm text-ink-muted transition-colors hover:text-gold"
+                    >
+                      <Phone size={16} className="shrink-0 text-gold" />
+                      <span dir="ltr">{phone}</span>
+                    </a>
+                  </li>
+                ))}
+                <li className="flex items-start gap-2 text-sm text-ink-muted">
+                  <MapPin size={16} className="mt-1 shrink-0 text-gold" />
+                  <span className="flex flex-col gap-0.5 leading-6">
+                    <span className="font-medium text-navy">{footer.contact.city}</span>
+                    <span>{footer.contact.address}</span>
+                  </span>
                 </li>
                 <li>
                   <a

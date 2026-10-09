@@ -4,7 +4,7 @@ import type { Dictionary } from "@/i18n/types";
 // لا تُغيّر المسارات (href) هنا؛ الروابط مشتركة بين اللغتين.
 const ar: Dictionary = {
   // اسم الشركة المؤقت — استبدله باسم الشركة الفعلي عند توفره.
-  companyName: "[اسم الشركة]",
+  companyName: "قوة الرمز",
 
   // مسار شعار الشركة كصورة (اختياري). اتركه فارغًا لاستخدام الاسم النصي فقط.
   logoSrc: "",
@@ -27,7 +27,7 @@ const ar: Dictionary = {
 
   cta: {
     label: "اطلب استشارة",
-    href: "/#contact",
+    href: "/consultation",
   },
 
   common: {
@@ -266,8 +266,144 @@ const ar: Dictionary = {
   finalCta: {
     heading: "لنحوّل طموحك الرقمي إلى واقع.",
     description: "تحدث مع فريقنا لاستكشاف الحلول التقنية المناسبة لمؤسستك.",
-    primaryCta: { label: "احجز استشارة", href: "#contact" },
+    primaryCta: { label: "احجز استشارة", href: "/consultation" },
     secondaryCta: { label: "تواصل معنا", href: "#contact" },
+  },
+
+  consultationRequest: {
+    metaTitle: "احجز استشارة",
+    intro: {
+      eyebrow: "تواصل مع خبرائنا",
+      heading: "لنبدأ بفهم احتياجاتك التقنية",
+      description:
+        "أخبرنا عن مشروعك أو التحديات التي تواجهها، وسيساعدك فريقنا في تحديد الحلول التقنية المناسبة لأهداف أعمالك.",
+    },
+    progressLabel: "مراحل طلب الاستشارة",
+    stepStatus: "الخطوة {current} من {total}",
+    steps: ["نوع الاستشارة", "تفاصيل المشروع", "معلومات التواصل"],
+    optionalLabel: "اختياري",
+    requiredLabel: "مطلوب",
+    nav: {
+      next: "التالي",
+      back: "السابق",
+      submit: "إرسال طلب الاستشارة",
+    },
+    notice:
+      "إرسال الطلبات سيكون متاحاً قريباً. يمكنك تعبئة النموذج، وسيتم تفعيل الإرسال بعد إعداد خدمة البريد الإلكتروني.",
+    step1: {
+      heading: "ما نوع الاستشارة التي تحتاجها؟",
+      description:
+        "اختر المجال الأقرب لاحتياجاتك، ويمكنك تحديد أكثر من خيار.",
+      options: [
+        { id: "technology-consulting", label: "الاستشارات التقنية" },
+        { id: "artificial-intelligence", label: "الذكاء الاصطناعي" },
+        { id: "development-customization", label: "التطوير والتخصيص" },
+        { id: "data-business-intelligence", label: "إدارة البيانات وذكاء الأعمال" },
+        { id: "cybersecurity", label: "الأمن السيبراني" },
+        { id: "infrastructure-cloud", label: "البنية التحتية والحلول السحابية" },
+        { id: "implementation-integration", label: "تنفيذ وتكامل الأنظمة" },
+        { id: "project-management-qa", label: "إدارة المشاريع وضمان الجودة" },
+        { id: "other", label: "أخرى" },
+      ],
+      otherLabel: "يرجى توضيح نوع الاستشارة",
+      otherPlaceholder: "اكتب نوع الاستشارة التي تحتاجها",
+      errors: { required: "يرجى اختيار خيار واحد على الأقل للمتابعة." },
+    },
+    step2: {
+      heading: "أخبرنا أكثر عن مشروعك",
+      goal: {
+        label: "ما الذي ترغب في تحقيقه؟",
+        placeholder:
+          "صف مشروعك أو التحدي الذي تواجهه والنتيجة التي ترغب في الوصول إليها...",
+        hint: "20 حرفاً على الأقل",
+        errors: {
+          required: "يرجى وصف ما ترغب في تحقيقه.",
+          min: "يرجى كتابة 20 حرفاً على الأقل.",
+          max: "لا يمكن أن يتجاوز النص 2000 حرف.",
+        },
+      },
+      stage: {
+        label: "ما المرحلة الحالية للمشروع؟",
+        options: [
+          { id: "initial-idea", label: "مجرد فكرة" },
+          { id: "planning", label: "مرحلة التخطيط" },
+          { id: "in-progress", label: "مشروع قيد التنفيذ" },
+          { id: "existing-system", label: "تطوير نظام قائم" },
+          { id: "not-sure", label: "غير متأكد" },
+        ],
+        error: "يرجى اختيار المرحلة الحالية للمشروع.",
+      },
+      startTiming: {
+        label: "متى تتوقع البدء؟",
+        options: [
+          { id: "asap", label: "في أقرب وقت" },
+          { id: "within-1-month", label: "خلال شهر" },
+          { id: "within-1-3-months", label: "خلال 1–3 أشهر" },
+          { id: "within-3-6-months", label: "خلال 3–6 أشهر" },
+          { id: "not-decided", label: "لم يتم التحديد بعد" },
+        ],
+      },
+      budget: {
+        label: "الميزانية التقديرية",
+        options: [
+          { id: "under-5k", label: "أقل من 5,000 دولار" },
+          { id: "5k-15k", label: "5,000 – 15,000 دولار" },
+          { id: "15k-50k", label: "15,000 – 50,000 دولار" },
+          { id: "above-50k", label: "أكثر من 50,000 دولار" },
+          { id: "prefer-to-discuss", label: "أفضل مناقشتها مع الفريق" },
+        ],
+      },
+    },
+    step3: {
+      heading: "كيف يمكننا التواصل معك؟",
+      fullName: { label: "الاسم الكامل", error: "يرجى إدخال الاسم الكامل." },
+      company: { label: "الشركة / المؤسسة" },
+      email: {
+        label: "البريد الإلكتروني للعمل",
+        placeholder: "name@company.com",
+        errors: {
+          required: "يرجى إدخال البريد الإلكتروني.",
+          invalid: "يرجى إدخال بريد إلكتروني صحيح.",
+        },
+      },
+      phone: {
+        label: "رقم الهاتف",
+        codeLabel: "رمز الدولة",
+        placeholder: "7X XXX XXXX",
+        error: "يرجى إدخال رقم هاتف صحيح.",
+        countries: [
+          { code: "+962", label: "الأردن" },
+          { code: "+966", label: "السعودية" },
+          { code: "+971", label: "الإمارات" },
+          { code: "+974", label: "قطر" },
+          { code: "+965", label: "الكويت" },
+          { code: "+973", label: "البحرين" },
+          { code: "+968", label: "عُمان" },
+          { code: "+970", label: "فلسطين" },
+          { code: "+961", label: "لبنان" },
+          { code: "+963", label: "سوريا" },
+          { code: "+964", label: "العراق" },
+          { code: "+20", label: "مصر" },
+          { code: "+218", label: "ليبيا" },
+          { code: "+44", label: "المملكة المتحدة" },
+          { code: "+1", label: "أمريكا / كندا" },
+        ],
+      },
+      contactMethod: {
+        label: "طريقة التواصل المفضلة",
+        options: [
+          { id: "email", label: "البريد الإلكتروني" },
+          { id: "phone", label: "الهاتف" },
+          { id: "either", label: "كلاهما" },
+        ],
+      },
+      notes: { label: "ملاحظات إضافية" },
+      consent: {
+        label:
+          "أوافق على استخدام المعلومات المقدمة للتواصل معي بخصوص طلب الاستشارة.",
+        error: "يجب الموافقة للمتابعة.",
+      },
+    },
   },
 
   footer: {
@@ -294,9 +430,10 @@ const ar: Dictionary = {
       },
     ],
     contact: {
-      email: "info@company.com",
-      phone: "+966 11 000 0000",
-      city: "الرياض، المملكة العربية السعودية",
+      email: "M.khader@mjc-jo.com",
+      phones: ["+962775580980", "+962795580980"],
+      city: "عمّان - الأردن",
+      address: "شارع وصفي التل، بناية 139، مركز أبو دقة، مكتب 204",
       linkedin: "#",
     },
     legalLinks: [
@@ -634,7 +771,7 @@ const ar: Dictionary = {
     },
     cta: {
       heading: "هل تحتاج إلى وضوح أكبر قبل اتخاذ قرارك التقني القادم؟",
-      button: { label: "احجز جلسة استشارية", href: "/#contact" },
+      button: { label: "احجز جلسة استشارية", href: "/consultation" },
     },
   },
 

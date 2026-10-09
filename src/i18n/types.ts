@@ -3,6 +3,14 @@
 
 export type Locale = "ar" | "en";
 
+import type {
+  BudgetId,
+  ContactMethodId,
+  ProjectStageId,
+  ServiceId,
+  StartTimingId,
+} from "@/lib/consultation/types";
+
 export type NavLink = {
   label: string;
   href: string;
@@ -208,8 +216,9 @@ export type FooterContent = {
   linkGroups: FooterLinkGroup[];
   contact: {
     email: string;
-    phone: string;
+    phones: string[];
     city: string;
+    address: string;
     linkedin: string;
   };
   legalLinks: FooterLink[];
@@ -263,9 +272,68 @@ export type Dictionary = {
   dataManagementPage: DataManagementPageContent;
   dashboardsPage: DashboardsPageContent;
   consultationPage: ConsultationPageContent;
+  consultationRequest: ConsultationRequestContent;
   implementationPage: ImplementationPageContent;
   projectManagementPage: ProjectManagementPageContent;
   qualityAssurancePage: QualityAssurancePageContent;
   infrastructurePage: InfrastructurePageContent;
   cybersecurityPage: CybersecurityPageContent;
+};
+
+// ---------------------------------------------------------------------------
+// صفحة طلب الاستشارة (/consultation)
+// ---------------------------------------------------------------------------
+type Opt<T extends string> = { id: T; label: string };
+
+export type ConsultationRequestContent = {
+  metaTitle: string;
+  intro: { eyebrow: string; heading: string; description: string };
+  progressLabel: string;
+  // يحتوي {current} و{total}
+  stepStatus: string;
+  steps: [string, string, string];
+  optionalLabel: string;
+  requiredLabel: string;
+  nav: { next: string; back: string; submit: string };
+  notice: string;
+  step1: {
+    heading: string;
+    description: string;
+    options: Opt<ServiceId>[];
+    otherLabel: string;
+    otherPlaceholder: string;
+    errors: { required: string };
+  };
+  step2: {
+    heading: string;
+    goal: {
+      label: string;
+      placeholder: string;
+      hint: string;
+      errors: { required: string; min: string; max: string };
+    };
+    stage: { label: string; options: Opt<ProjectStageId>[]; error: string };
+    startTiming: { label: string; options: Opt<StartTimingId>[] };
+    budget: { label: string; options: Opt<BudgetId>[] };
+  };
+  step3: {
+    heading: string;
+    fullName: { label: string; error: string };
+    company: { label: string };
+    email: {
+      label: string;
+      placeholder: string;
+      errors: { required: string; invalid: string };
+    };
+    phone: {
+      label: string;
+      codeLabel: string;
+      placeholder: string;
+      error: string;
+      countries: { code: string; label: string }[];
+    };
+    contactMethod: { label: string; options: Opt<ContactMethodId>[] };
+    notes: { label: string };
+    consent: { label: string; error: string };
+  };
 };

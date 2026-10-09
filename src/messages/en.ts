@@ -3,7 +3,7 @@ import type { Dictionary } from "@/i18n/types";
 // English edition. Must mirror the exact shape of src/messages/ar.ts.
 // Hrefs are shared across locales — do not translate paths/anchors.
 const en: Dictionary = {
-  companyName: "[Company Name]",
+  companyName: "Code Strength",
 
   logoSrc: "",
 
@@ -21,7 +21,7 @@ const en: Dictionary = {
 
   cta: {
     label: "Request a Consultation",
-    href: "/#contact",
+    href: "/consultation",
   },
 
   common: {
@@ -271,8 +271,144 @@ const en: Dictionary = {
     heading: "Let's Turn Your Digital Ambition Into Reality.",
     description:
       "Talk to our team to explore the right technology solutions for your organization.",
-    primaryCta: { label: "Book a Consultation", href: "#contact" },
+    primaryCta: { label: "Book a Consultation", href: "/consultation" },
     secondaryCta: { label: "Contact Us", href: "#contact" },
+  },
+
+  consultationRequest: {
+    metaTitle: "Request a Consultation",
+    intro: {
+      eyebrow: "Talk to Our Experts",
+      heading: "Let's Understand Your Technology Needs",
+      description:
+        "Tell us about your project or business challenges, and our team will help you explore technology solutions aligned with your goals.",
+    },
+    progressLabel: "Consultation request progress",
+    stepStatus: "Step {current} of {total}",
+    steps: ["Consultation Type", "Project Details", "Contact Information"],
+    optionalLabel: "Optional",
+    requiredLabel: "Required",
+    nav: {
+      next: "Continue",
+      back: "Back",
+      submit: "Submit Consultation Request",
+    },
+    notice:
+      "Consultation submissions will be available soon. You can complete the form, and submission will be enabled once email delivery is configured.",
+    step1: {
+      heading: "What type of consultation do you need?",
+      description:
+        "Select the areas that best match your needs. You may choose multiple options.",
+      options: [
+        { id: "technology-consulting", label: "Technology Consulting" },
+        { id: "artificial-intelligence", label: "Artificial Intelligence" },
+        { id: "development-customization", label: "Software Development & Customization" },
+        { id: "data-business-intelligence", label: "Data Management & Business Intelligence" },
+        { id: "cybersecurity", label: "Cybersecurity" },
+        { id: "infrastructure-cloud", label: "Infrastructure & Cloud" },
+        { id: "implementation-integration", label: "Implementation & Integration" },
+        { id: "project-management-qa", label: "Project Management & Quality Assurance" },
+        { id: "other", label: "Other" },
+      ],
+      otherLabel: "Please describe your consultation needs",
+      otherPlaceholder: "Describe the consultation you need",
+      errors: { required: "Please select at least one option to continue." },
+    },
+    step2: {
+      heading: "Tell Us About Your Project",
+      goal: {
+        label: "What would you like to achieve?",
+        placeholder:
+          "Describe your project, current challenges, and desired outcomes...",
+        hint: "At least 20 characters",
+        errors: {
+          required: "Please describe what you would like to achieve.",
+          min: "Please enter at least 20 characters.",
+          max: "The description cannot exceed 2000 characters.",
+        },
+      },
+      stage: {
+        label: "What is the current project stage?",
+        options: [
+          { id: "initial-idea", label: "Initial Idea" },
+          { id: "planning", label: "Planning" },
+          { id: "in-progress", label: "In Progress" },
+          { id: "existing-system", label: "Existing System Enhancement" },
+          { id: "not-sure", label: "Not Sure" },
+        ],
+        error: "Please select the current project stage.",
+      },
+      startTiming: {
+        label: "When are you planning to start?",
+        options: [
+          { id: "asap", label: "As Soon As Possible" },
+          { id: "within-1-month", label: "Within One Month" },
+          { id: "within-1-3-months", label: "Within 1–3 Months" },
+          { id: "within-3-6-months", label: "Within 3–6 Months" },
+          { id: "not-decided", label: "Not Yet Decided" },
+        ],
+      },
+      budget: {
+        label: "Estimated Budget",
+        options: [
+          { id: "under-5k", label: "Under $5,000" },
+          { id: "5k-15k", label: "$5,000 – $15,000" },
+          { id: "15k-50k", label: "$15,000 – $50,000" },
+          { id: "above-50k", label: "Above $50,000" },
+          { id: "prefer-to-discuss", label: "Prefer to Discuss" },
+        ],
+      },
+    },
+    step3: {
+      heading: "How Can We Reach You?",
+      fullName: { label: "Full Name", error: "Please enter your full name." },
+      company: { label: "Company / Organization" },
+      email: {
+        label: "Business Email",
+        placeholder: "name@company.com",
+        errors: {
+          required: "Please enter your email address.",
+          invalid: "Please enter a valid email address.",
+        },
+      },
+      phone: {
+        label: "Phone Number",
+        codeLabel: "Country code",
+        placeholder: "7X XXX XXXX",
+        error: "Please enter a valid phone number.",
+        countries: [
+          { code: "+962", label: "Jordan" },
+          { code: "+966", label: "Saudi Arabia" },
+          { code: "+971", label: "UAE" },
+          { code: "+974", label: "Qatar" },
+          { code: "+965", label: "Kuwait" },
+          { code: "+973", label: "Bahrain" },
+          { code: "+968", label: "Oman" },
+          { code: "+970", label: "Palestine" },
+          { code: "+961", label: "Lebanon" },
+          { code: "+963", label: "Syria" },
+          { code: "+964", label: "Iraq" },
+          { code: "+20", label: "Egypt" },
+          { code: "+218", label: "Libya" },
+          { code: "+44", label: "United Kingdom" },
+          { code: "+1", label: "USA / Canada" },
+        ],
+      },
+      contactMethod: {
+        label: "Preferred Contact Method",
+        options: [
+          { id: "email", label: "Email" },
+          { id: "phone", label: "Phone" },
+          { id: "either", label: "Either" },
+        ],
+      },
+      notes: { label: "Additional Notes" },
+      consent: {
+        label:
+          "I agree to the use of my submitted information for the purpose of responding to my consultation request.",
+        error: "You must agree to continue.",
+      },
+    },
   },
 
   footer: {
@@ -299,9 +435,10 @@ const en: Dictionary = {
       },
     ],
     contact: {
-      email: "info@company.com",
-      phone: "+966 11 000 0000",
-      city: "Riyadh, Saudi Arabia",
+      email: "M.khader@mjc-jo.com",
+      phones: ["+962775580980", "+962795580980"],
+      city: "Amman - Jordan",
+      address: "Wasfi Al-Tel Str Bull. 139 Abudaqqa Center, office 204",
       linkedin: "#",
     },
     legalLinks: [
@@ -668,7 +805,7 @@ const en: Dictionary = {
     },
     cta: {
       heading: "Need more clarity before your next technology decision?",
-      button: { label: "Book a Consulting Session", href: "/#contact" },
+      button: { label: "Book a Consulting Session", href: "/consultation" },
     },
   },
 
