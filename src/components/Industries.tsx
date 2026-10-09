@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { getDictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/types";
+import { IndustryAdvisoryModal } from "@/components/IndustryAdvisoryModal";
 
 const icons: ComponentType<{ size?: number; className?: string }>[] = [
   Landmark,
@@ -38,9 +39,12 @@ function CtaArrow() {
 export function Industries({ locale }: { locale: Locale }) {
   const { industries } = getDictionary(locale);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [advisoryOpen, setAdvisoryOpen] = useState(false);
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const active = industries.items[activeIndex];
   const count = industries.items.length;
+  const advisory = active.advisory;
+  const modalAdvisory = industries.items.find((item) => item.advisory)?.advisory;
 
   const handleTabKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
     let next: number | null = null;
@@ -169,15 +173,27 @@ export function Industries({ locale }: { locale: Locale }) {
               </div>
             </div>
 
-            <a
-              href={industries.cta.href}
-              className="group/cta relative mt-10 inline-flex w-fit items-center gap-2 rounded-sm text-sm font-semibold text-white transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50"
-            >
-              {industries.cta.label}
-              <span className="inline-flex transition-transform duration-200 motion-safe:group-hover/cta:translate-x-1 motion-safe:rtl:group-hover/cta:-translate-x-1">
-                <CtaArrow />
-              </span>
-            </a>
+            <div className="relative mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <a
+                href={industries.cta.href}
+                className="group/cta relative inline-flex w-fit items-center gap-2 rounded-sm text-sm font-semibold text-white transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50"
+              >
+                {industries.cta.label}
+                <span className="inline-flex transition-transform duration-200 motion-safe:group-hover/cta:translate-x-1 motion-safe:rtl:group-hover/cta:-translate-x-1">
+                  <CtaArrow />
+                </span>
+              </a>
+              {advisory && (
+                <button
+                  type="button"
+                  onClick={() => setAdvisoryOpen(true)}
+                  aria-haspopup="dialog"
+                  className="inline-flex items-center rounded-md border border-gold/60 px-5 py-2.5 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60"
+                >
+                  {advisory.buttonLabel}
+                </button>
+              )}
+            </div>
           </div>
         </div>
 
@@ -236,15 +252,27 @@ export function Industries({ locale }: { locale: Locale }) {
                           </div>
                         ))}
                       </div>
-                      <a
-                        href={industries.cta.href}
-                        className="group/cta mt-5 inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-navy transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50"
-                      >
-                        {industries.cta.label}
-                        <span className="inline-flex transition-transform duration-200 motion-safe:group-hover/cta:translate-x-1 motion-safe:rtl:group-hover/cta:-translate-x-1">
-                          <CtaArrow />
-                        </span>
-                      </a>
+                      <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">
+                        <a
+                          href={industries.cta.href}
+                          className="group/cta inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-navy transition-colors hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50"
+                        >
+                          {industries.cta.label}
+                          <span className="inline-flex transition-transform duration-200 motion-safe:group-hover/cta:translate-x-1 motion-safe:rtl:group-hover/cta:-translate-x-1">
+                            <CtaArrow />
+                          </span>
+                        </a>
+                        {item.advisory && (
+                          <button
+                            type="button"
+                            onClick={() => setAdvisoryOpen(true)}
+                            aria-haspopup="dialog"
+                            className="inline-flex items-center rounded-md border border-gold px-4 py-2 text-sm font-semibold text-navy transition-colors hover:bg-gold-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60"
+                          >
+                            {item.advisory.buttonLabel}
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -253,6 +281,14 @@ export function Industries({ locale }: { locale: Locale }) {
           })}
         </div>
       </div>
+
+      {modalAdvisory && (
+        <IndustryAdvisoryModal
+          advisory={modalAdvisory}
+          open={advisoryOpen}
+          onClose={() => setAdvisoryOpen(false)}
+        />
+      )}
     </section>
   );
 }

@@ -156,6 +156,70 @@ const en: Dictionary = {
           "Systems Integration",
           "Security & Governance",
         ],
+        advisory: {
+          buttonLabel: "Banking Advisory",
+          closeLabel: "Close",
+          eyebrow: "Banking Advisory",
+          heading: "Technology and Operational Advisory for Financial Institutions",
+          description:
+            "We support banks and financial institutions in modernizing their platforms, strengthening security and compliance, and leveraging data and artificial intelligence to enhance customer experience and operational efficiency.",
+          sectionEyebrow: "Advisory Capabilities",
+          sectionHeading: "Anti-Money Laundering & Counter-Terrorist Financing (AML/CFT)",
+          sectionDescription:
+            "We provide specialized advisory services to strengthen compliance frameworks, manage financial crime risks, and improve the effectiveness of AML/CFT programs in alignment with applicable regulatory requirements.",
+          items: [
+            {
+              title: "Enterprise-Wide Risk Assessment",
+              description:
+                "Assess money laundering and terrorist financing risks across the institution, including products, services, customers, delivery channels, and geographic exposure, and identify risk mitigation priorities.",
+            },
+            {
+              title: "Policies & Procedures",
+              description:
+                "Develop, review, and update AML/CFT policies and procedures in line with applicable regulatory requirements and relevant industry practices.",
+            },
+            {
+              title: "Know Your Customer (KYC / CDD)",
+              description:
+                "Design and enhance customer identification, identity verification, risk classification, and enhanced due diligence procedures for higher-risk customers.",
+            },
+            {
+              title: "Transaction Monitoring",
+              description:
+                "Develop and optimize transaction monitoring rules and scenarios to identify unusual activity, reduce false positives, and improve monitoring effectiveness.",
+            },
+            {
+              title: "Suspicious Activity Reporting",
+              description:
+                "Enhance internal investigation, escalation, documentation, and suspicious activity reporting processes in accordance with applicable requirements.",
+            },
+            {
+              title: "Sanctions & PEP Screening",
+              description:
+                "Assess and improve customer and transaction screening processes against sanctions lists and politically exposed persons (PEP) databases, including alert handling procedures.",
+            },
+            {
+              title: "Independent Review & Effectiveness Assessment",
+              description:
+                "Conduct independent assessments of AML/CFT program effectiveness, identify control gaps, and recommend practical improvements.",
+            },
+            {
+              title: "Training & Awareness",
+              description:
+                "Develop role-based AML/CFT training and awareness programs for employees, management, and relevant control functions.",
+            },
+            {
+              title: "Compliance Automation",
+              description:
+                "Leverage technology and artificial intelligence to support KYC, transaction monitoring, alert management, and regulatory reporting, with appropriate governance and human oversight.",
+            },
+          ],
+          cta: {
+            heading: "Need Specialized AML/CFT Advisory Support?",
+            label: "Request a Consultation",
+            href: "/consultation",
+          },
+        },
       },
       {
         title: "Telecommunications",

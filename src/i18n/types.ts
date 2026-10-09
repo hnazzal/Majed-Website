@@ -36,6 +36,21 @@ export type Industry = {
   shortLabel: string;
   description: string;
   capabilities: string[];
+  // نافذة تفصيلية اختيارية تظهر بزر إضافي داخل لوحة القطاع (مثل الاستشارات البنكية).
+  advisory?: IndustryAdvisory;
+};
+
+export type IndustryAdvisory = {
+  buttonLabel: string;
+  closeLabel: string;
+  eyebrow: string;
+  heading: string;
+  description: string;
+  sectionEyebrow: string;
+  sectionHeading: string;
+  sectionDescription: string;
+  items: { title: string; description: string }[];
+  cta: { heading: string; label: string; href: string };
 };
 
 export type IndustriesContent = {
