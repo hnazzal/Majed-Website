@@ -21,8 +21,7 @@ const ar: Dictionary = {
     { label: "من نحن", href: "/#about" },
     { label: "حلولنا", href: "/solutions" },
     { label: "القطاعات", href: "/#sectors" },
-    { label: "قصص النجاح", href: "/#success-stories" },
-    { label: "الموارد", href: "/#resources" },
+    { label: "الشركات الحليفة", href: "/#partners" },
     { label: "تواصل معنا", href: "/#contact" },
   ],
 
@@ -208,49 +207,27 @@ const ar: Dictionary = {
     ],
   },
 
-  successStories: {
-    eyebrow: "قصص النجاح",
-    heading: "شراكات تصنع الفرق",
+  alliedCompanies: {
+    eyebrow: "الشركات الحليفة",
+    heading: "شركاء نبني معهم النجاح",
     description:
-      "ننفّذ حلولاً تقنية متكاملة تحقق نتائج قابلة للقياس للجهات الحكومية والشركات الكبرى.",
-    link: { label: "استعرض جميع قصص النجاح", href: "#success-stories" },
-    cardCta: "قراءة القصة",
+      "شبكة من الشركات الحليفة التي نتعاون معها لتقديم خدمات متكاملة في أكثر من سوق.",
     items: [
       {
-        title: "منصة موحدة للخدمات الحكومية",
-        description:
-          "بناء منصة رقمية موحدة تجمع عشرات الخدمات الحكومية في تجربة واحدة سلسة وسريعة.",
-        image: "",
-        results: [
-          { value: "+60%", label: "رضا المستفيدين" },
-          { value: "-35%", label: "زمن المعالجة" },
-          { value: "2M+", label: "مستخدم" },
-        ],
-        href: "#success-stories",
+        name: "معاني لحلول الأعمال",
+        tagline: "Ma'ani Business Solutions",
+        logo: "/partners/maani.png",
+        address: "السعودية - جدة - غرفة المستودعات - مستودع رقم 104",
+        phones: ["+966 54 969 8538"],
+        email: "info@maanico.sa",
       },
       {
-        title: "تحول رقمي لمجموعة وطنية",
-        description:
-          "إعادة هيكلة الأنظمة الأساسية ودمجها ضمن بيئة رقمية موحدة وقابلة للتوسع.",
-        image: "",
-        results: [
-          { value: "+45%", label: "كفاءة تشغيلية" },
-          { value: "-40%", label: "تكلفة التشغيل" },
-          { value: "+120", label: "نظام مدمج" },
-        ],
-        href: "#success-stories",
-      },
-      {
-        title: "منصة بيانات لهيئة رائدة",
-        description:
-          "بناء منصة بيانات مركزية تدعم اتخاذ القرار الفوري القائم على الذكاء الاصطناعي.",
-        image: "",
-        results: [
-          { value: "+70%", label: "دقة القرارات" },
-          { value: "-50%", label: "زمن التحليل" },
-          { value: "500M+", label: "نقطة بيانات" },
-        ],
-        href: "#success-stories",
+        name: "شركة نبراس التميز",
+        tagline: "للتفتيش والمطابقة",
+        logo: "/partners/nibras.png",
+        address: "ليبيا - طرابلس - طريق الزناتة الجديدة",
+        phones: ["+218 91 384 7375", "+218 94 384 7375"],
+        email: "info@nibras-tm.ly",
       },
     ],
   },
@@ -311,7 +288,7 @@ const ar: Dictionary = {
         links: [
           { label: "من نحن", href: "/#about" },
           { label: "القطاعات", href: "/#sectors" },
-          { label: "قصص النجاح", href: "/#success-stories" },
+          { label: "الشركات الحليفة", href: "/#partners" },
           { label: "الموارد", href: "/#resources" },
         ],
       },

@@ -4,7 +4,7 @@ import { StatsBar } from "@/components/StatsBar";
 import { Services } from "@/components/Services";
 import { About } from "@/components/About";
 import { Industries } from "@/components/Industries";
-import { SuccessStories } from "@/components/SuccessStories";
+import { AlliedCompanies } from "@/components/AlliedCompanies";
 import { WhyUs } from "@/components/WhyUs";
 import { FinalCta } from "@/components/FinalCta";
 import { Footer } from "@/components/Footer";
@@ -22,7 +22,7 @@ export default async function Home() {
         <Services locale={locale} />
         <About locale={locale} />
         <Industries locale={locale} />
-        <SuccessStories locale={locale} />
+        <AlliedCompanies locale={locale} />
         <WhyUs locale={locale} />
         <FinalCta locale={locale} />
       </main>

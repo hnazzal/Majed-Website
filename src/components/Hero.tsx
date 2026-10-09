@@ -1,7 +1,6 @@
 import { ArrowLeft, ArrowRight, PlayCircle } from "lucide-react";
 import { getDictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/types";
-import { DashboardMockup } from "@/components/DashboardMockup";
 
 export function Hero({ locale }: { locale: Locale }) {
   const { hero } = getDictionary(locale);
@@ -50,8 +49,17 @@ export function Hero({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div>
-          <DashboardMockup locale={locale} />
+        <div className="relative">
+          <div
+            className="absolute inset-0 -z-10 translate-x-4 translate-y-4 rounded-[28px] bg-gradient-to-br from-gold/30 to-navy/20 blur-2xl"
+            aria-hidden
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hero/hero-dashboard.png"
+            alt={hero.mockup.ariaLabel}
+            className="aspect-[4/3] w-full rounded-[28px] object-cover shadow-[0_40px_80px_-24px_rgba(16,39,67,0.45)]"
+          />
         </div>
       </div>
     </section>

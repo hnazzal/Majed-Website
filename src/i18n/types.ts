@@ -53,13 +53,20 @@ export type CaseStudy = {
   href: string;
 };
 
-export type SuccessStoriesContent = {
+export type AlliedCompany = {
+  name: string;
+  tagline: string;
+  logo: string;
+  address: string;
+  phones: string[];
+  email: string;
+};
+
+export type AlliedCompaniesContent = {
   eyebrow: string;
   heading: string;
   description: string;
-  link: { label: string; href: string };
-  cardCta: string;
-  items: CaseStudy[];
+  items: AlliedCompany[];
 };
 
 export type Strength = {
@@ -246,7 +253,7 @@ export type Dictionary = {
   };
   about: AboutContent;
   industries: IndustriesContent;
-  successStories: SuccessStoriesContent;
+  alliedCompanies: AlliedCompaniesContent;
   whyUs: WhyUsContent;
   finalCta: FinalCtaContent;
   footer: FooterContent;

@@ -15,8 +15,7 @@ const en: Dictionary = {
     { label: "About Us", href: "/#about" },
     { label: "Solutions", href: "/solutions" },
     { label: "Industries", href: "/#sectors" },
-    { label: "Success Stories", href: "/#success-stories" },
-    { label: "Resources", href: "/#resources" },
+    { label: "Allied Companies", href: "/#partners" },
     { label: "Contact Us", href: "/#contact" },
   ],
 
@@ -209,49 +208,27 @@ const en: Dictionary = {
     ],
   },
 
-  successStories: {
-    eyebrow: "Success Stories",
-    heading: "Partnerships That Make a Difference",
+  alliedCompanies: {
+    eyebrow: "Allied Companies",
+    heading: "Partners We Build Success With",
     description:
-      "We deliver integrated technology solutions that achieve measurable results for government entities and large enterprises.",
-    link: { label: "View All Success Stories", href: "#success-stories" },
-    cardCta: "Read the Story",
+      "A network of allied companies we collaborate with to deliver integrated services across multiple markets.",
     items: [
       {
-        title: "Unified Government Services Platform",
-        description:
-          "Building a unified digital platform that brings together dozens of government services in one seamless, fast experience.",
-        image: "",
-        results: [
-          { value: "+60%", label: "Beneficiary Satisfaction" },
-          { value: "-35%", label: "Processing Time" },
-          { value: "2M+", label: "Users" },
-        ],
-        href: "#success-stories",
+        name: "Ma'ani Business Solutions",
+        tagline: "Business Solutions",
+        logo: "/partners/maani.png",
+        address: "Saudi Arabia - Jeddah - Chamber of Warehouses - Warehouse No. 104",
+        phones: ["+966 54 969 8538"],
+        email: "info@maanico.sa",
       },
       {
-        title: "Digital Transformation for a National Group",
-        description:
-          "Restructuring core systems and consolidating them into a unified, scalable digital environment.",
-        image: "",
-        results: [
-          { value: "+45%", label: "Operational Efficiency" },
-          { value: "-40%", label: "Operating Cost" },
-          { value: "120+", label: "Integrated Systems" },
-        ],
-        href: "#success-stories",
-      },
-      {
-        title: "Data Platform for a Leading Authority",
-        description:
-          "Building a centralized data platform that supports real-time, AI-driven decision-making.",
-        image: "",
-        results: [
-          { value: "+70%", label: "Decision Accuracy" },
-          { value: "-50%", label: "Analysis Time" },
-          { value: "500M+", label: "Data Points" },
-        ],
-        href: "#success-stories",
+        name: "Nibras Al-Tamayuz Company",
+        tagline: "Inspection & Conformity",
+        logo: "/partners/nibras.png",
+        address: "Tripoli, Libya - New Zenata Road",
+        phones: ["+218 91 384 7375", "+218 94 384 7375"],
+        email: "info@nibras-tm.ly",
       },
     ],
   },
@@ -316,7 +293,7 @@ const en: Dictionary = {
         links: [
           { label: "About Us", href: "/#about" },
           { label: "Industries", href: "/#sectors" },
-          { label: "Success Stories", href: "/#success-stories" },
+          { label: "Allied Companies", href: "/#partners" },
           { label: "Resources", href: "/#resources" },
         ],
       },
