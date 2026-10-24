@@ -49,7 +49,7 @@ export type IndustryAdvisory = {
   sectionEyebrow: string;
   sectionHeading: string;
   sectionDescription: string;
-  items: { title: string; description: string }[];
+  items: { title: string; bullets: string[] }[];
   cta: { heading: string; label: string; href: string };
 };
 
@@ -227,14 +227,12 @@ export type FooterLinkGroup = {
 
 export type FooterContent = {
   contactHeading: string;
-  linkedinLabel: string;
   linkGroups: FooterLinkGroup[];
   contact: {
     email: string;
     phones: string[];
     city: string;
     address: string;
-    linkedin: string;
   };
   legalLinks: FooterLink[];
   // النص الذي يلي اسم الشركة في سطر الحقوق، مثل "جميع الحقوق محفوظة." أو "All rights reserved."

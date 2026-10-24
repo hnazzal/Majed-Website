@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { getDictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/types";
 import { Logo } from "@/components/Logo";
@@ -68,15 +68,6 @@ export function Footer({ locale }: { locale: Locale }) {
                     <span className="font-medium text-navy">{footer.contact.city}</span>
                     <span>{footer.contact.address}</span>
                   </span>
-                </li>
-                <li>
-                  <a
-                    href={footer.contact.linkedin}
-                    className="flex items-center gap-2 text-sm text-ink-muted transition-colors hover:text-gold"
-                  >
-                    <ExternalLink size={16} className="shrink-0 text-gold" />
-                    {footer.linkedinLabel}
-                  </a>
                 </li>
               </ul>
             </div>

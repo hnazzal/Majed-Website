@@ -164,58 +164,59 @@ const en: Dictionary = {
           description:
             "We support banks and financial institutions in modernizing their platforms, strengthening security and compliance, and leveraging data and artificial intelligence to enhance customer experience and operational efficiency.",
           sectionEyebrow: "Advisory Capabilities",
-          sectionHeading: "Anti-Money Laundering & Counter-Terrorist Financing (AML/CFT)",
+          sectionHeading:
+            "Our Banking Advisory Services",
           sectionDescription:
-            "We provide specialized advisory services to strengthen compliance frameworks, manage financial crime risks, and improve the effectiveness of AML/CFT programs in alignment with applicable regulatory requirements.",
+            "We provide specialized advisory services to banks and financial institutions across compliance, risk management, AML/CFT, digital transformation, and governance, in alignment with applicable regulatory requirements.",
           items: [
             {
-              title: "Enterprise-Wide Risk Assessment",
-              description:
-                "Assess money laundering and terrorist financing risks across the institution, including products, services, customers, delivery channels, and geographic exposure, and identify risk mitigation priorities.",
+              title: "Banking Compliance & Regulatory Advisory",
+              bullets: [
+                "Review of compliance policies and procedures.",
+                "Gap assessment against regulatory requirements.",
+                "Support in preparing internal policies and procedures.",
+                "Development of monitoring mechanisms and regulatory reporting.",
+              ],
             },
             {
-              title: "Policies & Procedures",
-              description:
-                "Develop, review, and update AML/CFT policies and procedures in line with applicable regulatory requirements and relevant industry practices.",
+              title: "Banking Risk Management Consultancy",
+              bullets: [
+                "Design and development of risk matrices.",
+                "Development of risk assessment and customer classification methodologies.",
+                "Review of Key Risk Indicators (KRIs).",
+                "Improvement of risk monitoring mechanisms and management reporting.",
+              ],
             },
             {
-              title: "Know Your Customer (KYC / CDD)",
-              description:
-                "Design and enhance customer identification, identity verification, risk classification, and enhanced due diligence procedures for higher-risk customers.",
+              title: "AML/CFT Advisory",
+              bullets: [
+                "Design and development of the Risk-Based Approach (RBA) methodology.",
+                "Review of customer risk factors, such as nationality, place of residence, and occupation.",
+                "Improvement of customer risk-rating methodologies.",
+                "Review of monitoring rules, alerts, and due diligence procedures.",
+              ],
             },
             {
-              title: "Transaction Monitoring",
-              description:
-                "Develop and optimize transaction monitoring rules and scenarios to identify unusual activity, reduce false positives, and improve monitoring effectiveness.",
+              title: "Banking Technology & Digital Transformation",
+              bullets: [
+                "Automation of banking procedures and operations.",
+                "Development and improvement of banking system requirements.",
+                "Integration of systems, databases, and reporting.",
+                "Automation of data import, validation, and review.",
+              ],
             },
             {
-              title: "Suspicious Activity Reporting",
-              description:
-                "Enhance internal investigation, escalation, documentation, and suspicious activity reporting processes in accordance with applicable requirements.",
-            },
-            {
-              title: "Sanctions & PEP Screening",
-              description:
-                "Assess and improve customer and transaction screening processes against sanctions lists and politically exposed persons (PEP) databases, including alert handling procedures.",
-            },
-            {
-              title: "Independent Review & Effectiveness Assessment",
-              description:
-                "Conduct independent assessments of AML/CFT program effectiveness, identify control gaps, and recommend practical improvements.",
-            },
-            {
-              title: "Training & Awareness",
-              description:
-                "Develop role-based AML/CFT training and awareness programs for employees, management, and relevant control functions.",
-            },
-            {
-              title: "Compliance Automation",
-              description:
-                "Leverage technology and artificial intelligence to support KYC, transaction monitoring, alert management, and regulatory reporting, with appropriate governance and human oversight.",
+              title: "Banking Governance & Internal Controls",
+              bullets: [
+                "Assessment of internal control environments.",
+                "Review of procedures and identification of gaps.",
+                "Development of authority and responsibility matrices.",
+                "Preparation of remediation plans and follow-up on recommendation implementation.",
+              ],
             },
           ],
           cta: {
-            heading: "Need Specialized AML/CFT Advisory Support?",
+            heading: "Looking for Specialized Banking Advisory Support?",
             label: "Request a Consultation",
             href: "/consultation",
           },
@@ -372,6 +373,7 @@ const en: Dictionary = {
         { id: "infrastructure-cloud", label: "Infrastructure & Cloud" },
         { id: "implementation-integration", label: "Implementation & Integration" },
         { id: "project-management-qa", label: "Project Management & Quality Assurance" },
+        { id: "banking-advisory", label: "Banking Advisory" },
         { id: "other", label: "Other" },
       ],
       otherLabel: "Please describe your consultation needs",
@@ -477,7 +479,6 @@ const en: Dictionary = {
 
   footer: {
     contactHeading: "Contact Us",
-    linkedinLabel: "LinkedIn",
     linkGroups: [
       {
         title: "Solutions",
@@ -503,7 +504,6 @@ const en: Dictionary = {
       phones: ["+962775580980", "+962795580980"],
       city: "Amman - Jordan",
       address: "Wasfi Al-Tel Str Bull. 139 Abudaqqa Center, office 204",
-      linkedin: "#",
     },
     legalLinks: [
       { label: "Privacy Policy", href: "#" },
@@ -520,12 +520,6 @@ const en: Dictionary = {
         "We help organizations move from digital challenges to connected, secure, and scalable technology ecosystems.",
     },
     items: [
-      {
-        title: "Solutions",
-        description:
-          "A complete ecosystem of technology solutions designed to meet your organization's operational and strategic needs.",
-        href: "/solutions/overview",
-      },
       {
         title: "Artificial Intelligence",
         description:

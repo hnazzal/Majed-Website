@@ -112,7 +112,7 @@ export function IndustryAdvisoryModal({
               {advisory.sectionDescription}
             </p>
 
-            <ol className="mt-8 grid grid-cols-1 gap-x-8 gap-y-0 sm:grid-cols-2 lg:grid-cols-3">
+            <ol className="mt-8 grid grid-cols-1 gap-x-8 gap-y-0 sm:grid-cols-2">
               {advisory.items.map((item, index) => (
                 <li key={item.title} className="border-t border-border py-6">
                   <span className="text-sm font-bold tabular-nums text-gold">
@@ -121,9 +121,17 @@ export function IndustryAdvisoryModal({
                   <h4 className="mt-2 text-base font-semibold leading-snug text-navy">
                     {item.title}
                   </h4>
-                  <p className="mt-2 text-sm leading-7 text-ink-muted">
-                    {item.description}
-                  </p>
+                  <ul className="mt-3 space-y-2 text-sm leading-7 text-ink-muted">
+                    {item.bullets.map((bullet) => (
+                      <li key={bullet} className="flex gap-2">
+                        <span
+                          className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-gold"
+                          aria-hidden
+                        />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </li>
               ))}
             </ol>

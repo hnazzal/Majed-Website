@@ -1,6 +1,5 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { StatsBar } from "@/components/StatsBar";
 import { Services } from "@/components/Services";
 import { About } from "@/components/About";
 import { Industries } from "@/components/Industries";
@@ -18,7 +17,6 @@ export default async function Home() {
       <Header locale={locale} />
       <main className="flex-1">
         <Hero locale={locale} />
-        <StatsBar locale={locale} />
         <Services locale={locale} />
         <About locale={locale} />
         <Industries locale={locale} />

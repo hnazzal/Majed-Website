@@ -12,6 +12,7 @@ export const SERVICE_IDS = [
   "infrastructure-cloud",
   "implementation-integration",
   "project-management-qa",
+  "banking-advisory",
   "other",
 ] as const;
 export type ServiceId = (typeof SERVICE_IDS)[number];

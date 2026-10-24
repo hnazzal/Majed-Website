@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { getDictionary } from "@/i18n/dictionary";
 import type { Locale } from "@/i18n/types";
 
@@ -38,13 +38,6 @@ export function Hero({ locale }: { locale: Locale }) {
               {hero.primaryCta.label}
               <ArrowRight size={18} className="rtl:hidden" />
               <ArrowLeft size={18} className="hidden rtl:block" />
-            </a>
-            <a
-              href={hero.secondaryCta.href}
-              className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-7 py-3.5 text-base font-semibold text-navy transition-colors hover:border-navy/30 hover:bg-navy-soft"
-            >
-              <PlayCircle size={20} className="text-gold" />
-              {hero.secondaryCta.label}
             </a>
           </div>
         </div>

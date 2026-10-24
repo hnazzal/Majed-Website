@@ -13,6 +13,7 @@ import {
   Compass,
   Ellipsis,
   Info,
+  Landmark,
   ShieldCheck,
   Workflow,
   type LucideIcon,
@@ -37,6 +38,7 @@ const SERVICE_ICONS: Record<ServiceId, LucideIcon> = {
   "infrastructure-cloud": Cloud,
   "implementation-integration": Workflow,
   "project-management-qa": ClipboardCheck,
+  "banking-advisory": Landmark,
   other: Ellipsis,
 };
 
